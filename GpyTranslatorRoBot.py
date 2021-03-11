@@ -5,12 +5,6 @@ from gpytranslate import Translator
 import sqlite3, string
 
 # ⚠️ Fill api_id and api_hash from my.telegram.org.. Also fill your bot_token from @botfather
-
-bot = Client(
-    "APP_NAME",
-    api_id=""
-    api_hash="",
-    bot_token= ""
 )
 
 db = sqlite3.connect("userlanguages.db")
