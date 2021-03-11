@@ -69,8 +69,8 @@ async def backtostart(bot, query: CallbackQuery):
                     InlineKeyboardButton("💚 Credits",  callback_data=b"Credits")
                 ],
                 [
-                    InlineKeyboardButton("⚠️ Source",  url="https://github.com/Mr-Dark-Prince/GpyTranslatorRoBot"),
-                    InlineKeyboardButton("⛱️ Owner",  url="https://t.me/mr_dark_prince"),
+                    InlineKeyboardButton("👩‍💻 support",  url="https://t.me/vohaunion"),
+                    InlineKeyboardButton("⛱️ Owner",  url="https://t.me/Xlaaf"),
                 ]
             ]
         )
@@ -90,8 +90,8 @@ async def welcomemsg(bot, msg):
                     InlineKeyboardButton("💚 Credits",  callback_data=b"Credits")
                 ],
                 [
-                    InlineKeyboardButton("⚠️ Source",  url="https://github.com/Mr-Dark-Prince/GpyTranslatorRoBot"),
-                    InlineKeyboardButton("⛱️ Owner",  url="https://t.me/mr_dark_prince"),
+                    InlineKeyboardButton("👩‍💻 Support",  url="https://t.me/vohaunion"),
+                    InlineKeyboardButton("⛱️ Owner",  url="https://t.me/Xlaaf"),
                 ]
             ]
         )
@@ -99,7 +99,7 @@ async def welcomemsg(bot, msg):
 #Setup Help Message with buttons    
 @bot.on_callback_query(filters.regex(r"^help"))
 async def helpbutton(bot: Client, query: CallbackQuery):
-    await query.message.edit("**GpyTranslateRoBot**\n\nGpyTranslate is a word 'G+Py+Translate' which means 'Google Python Translate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nGpyTranslatorRoBot is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use GpyTranslatorRoBot in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to GpyTranslator Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.",
+    await query.message.edit("**VohaTranslator**\n\nVohaTranslate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nVohaTranslate is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use VohaTranslate in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to VohaTranslate Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("⬅️ Go Back ⬅️", callback_data="back")],
@@ -110,12 +110,12 @@ async def helpbutton(bot: Client, query: CallbackQuery):
 #Popup Credits    
 @bot.on_callback_query(filters.regex(r"^Credits"))
 async def credits(bot: Client, query: CallbackQuery):
-    await query.answer("Developers 🧑‍💻\n\n • @Mr_Dark_Prince\n • @MrCentimetre\n • @itayki\n\nInspiration 👨🏻‍🏫\n\n • @DavideGalilei", show_alert=True)
+    await query.answer("Developers 🧑‍💻\n\n • @Xlaaf\n • @caramelldansen\n • @nathalie_agathaa\n\nInspiration 👨🏻‍🏫\n\n • @DavideGalilei", show_alert=True)
     
 # user sent /help command, configure the message that the bot should send   
 @bot.on_message(filters.private & filters.command("help"))
 async def help(bot, msg):
-    await msg.reply_text(f"**GpyTranslateRoBot**\n\nGpyTranslate is a word 'G+Py+Translate' which means 'Google Python Translate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nGpyTranslatorRoBot is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use GpyTranslatorRoBot in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to GpyTranslator Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.")
+    await msg.reply_text(f"**GpyTranslateRoBot**\n\nVohaTranslate. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nVohaTranslate is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use Vohatranslate in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to VohaTranslate Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.")
 
 ##When the user sent /language command, configure the message that the bot should send
 @bot.on_message(filters.private & filters.command("language"))
